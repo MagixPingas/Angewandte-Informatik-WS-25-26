@@ -1,3 +1,10 @@
+# ---------------------------------------------------------------
+# Project : UE1 Zoom (PyQt5)
+# Author  : Marco Gernet
+# Date    : 2025-10-30
+# Purpose : Changing widget-size with PyQt5
+# ---------------------------------------------------------------
+
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
