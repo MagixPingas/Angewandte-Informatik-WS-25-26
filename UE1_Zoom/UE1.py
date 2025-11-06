@@ -1,5 +1,5 @@
 from PyQt5 import uic
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -14,7 +14,7 @@ class MainWindow(QMainWindow):
 
     def button_click(self, factor):
 
-        self.resize(int(self.width() * factor), self.height())
+        self.resize(int(self.width() * factor), self.height())              #Werte von float zu int umgewandelt
 
 
 
