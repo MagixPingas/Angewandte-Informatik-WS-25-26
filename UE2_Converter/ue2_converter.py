@@ -2,7 +2,7 @@
 # Project : UE2 Converter (PyQt5)
 # Author  : Marco Gernet
 # Date    : 2025-11-06
-# Purpose :  Miles ↔ Kilometer converter with PyQt5
+# Purpose : Miles ↔ Kilometer converter with PyQt5
 # ---------------------------------------------------------------
 
 from PyQt5 import uic
