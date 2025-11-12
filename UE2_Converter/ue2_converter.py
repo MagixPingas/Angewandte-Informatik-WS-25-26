@@ -37,7 +37,7 @@ class MainWindow(QMainWindow):
             elif index == 0:
                 conv_value /= 1.609344
 
-            print('Output:', str(conv_value) + ' ' + unit + '\n')
+            print('Output:', str(conv_value), unit, '\n')
             self.label.setText(str(conv_value) + ' ' + unit)
 
         except ValueError:
