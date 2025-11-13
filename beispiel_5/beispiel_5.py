@@ -23,7 +23,6 @@ class MainWindow(QMainWindow):
 
 
 
-
 app = QApplication([])
 window = MainWindow()
 app.exec_()
