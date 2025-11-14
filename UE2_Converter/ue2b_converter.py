@@ -4,7 +4,6 @@
 # Date    : 2025-11-13
 # Purpose : Miles ↔ Kilometer converter with PyQt5
 # ---------------------------------------------------------------
-from operator import index
 
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
@@ -55,36 +54,36 @@ class MainWindow(QMainWindow):
 
             unit = ''
 
-            if index == 'rb_km':
-                conv_value /= 1.609344
-                self.comboBox.blockSignals(True)
-                self.comboBox.setCurrentIndex(0)
-                self.comboBox.blockSignals(False)
-                unit = 'Meilen [mi]'
+            match index:
 
+                case 'rb_km':                           #RadioButton km
+                    conv_value /= 1.609344
+                    self.comboBox.blockSignals(True)
+                    self.comboBox.setCurrentIndex(0)
+                    self.comboBox.blockSignals(False)
+                    unit = 'Meilen [mi]'
 
-            elif index == 'rb_mi':
-                conv_value *= 1.609344
-                self.comboBox.blockSignals(True)
-                self.comboBox.setCurrentIndex(1)
-                self.comboBox.blockSignals(False)
-                unit = 'Kilometer [km]'
+                case 'rb_mi':                           #RadioButton mi
+                    conv_value *= 1.609344
+                    self.comboBox.blockSignals(True)
+                    self.comboBox.setCurrentIndex(1)
+                    self.comboBox.blockSignals(False)
+                    unit = 'Kilometer [km]'
 
+                case 1:                                 #ComboBox mi
+                    conv_value *= 1.609344
+                    self.rb_mi.blockSignals(True)
+                    self.rb_mi.setChecked(True)
+                    unit = self.comboBox.itemText((index + 1) % 2)
+                    self.rb_mi.blockSignals(False)
 
-            elif index == 1:
-                conv_value *= 1.609344
-                self.rb_mi.blockSignals(True)
-                self.rb_mi.setChecked(True)
-                unit = self.comboBox.itemText((index + 1) % 2)
-                self.rb_mi.blockSignals(False)
+                case 0:
+                    conv_value /= 1.609344              #ComboBox km
+                    self.rb_km.blockSignals(True)
+                    self.rb_km.setChecked(True)
+                    unit = self.comboBox.itemText((index + 1) % 2)
+                    self.rb_km.blockSignals(False)
 
-
-            elif index == 0:
-                conv_value /= 1.609344
-                self.rb_km.blockSignals(True)
-                self.rb_km.setChecked(True)
-                unit = self.comboBox.itemText((index + 1) % 2)
-                self.rb_km.blockSignals(False)
 
 
             self.outputText(conv_value, unit)
