@@ -46,9 +46,59 @@ This repository documents my progress in **Applied Computer Science**, focusing 
 
 ---
 
+## 🛠️ Installation and Setup
+
+### Dependencies
+
+This project uses Python and its dependencies are managed using the requirements.txt file.
+
+To set up your environment, it's highly recommended to use a [virtual environment](https://docs.python.org/3/library/venv.html) to keep the project dependencies separate from your system's global Python packages.
+
+### 1. Create a [Virtual Environment](https://docs.python.org/3/library/venv.html) (Optional, but Recommended)
+
+In your project's root directory, run the following commands in your terminal:
+
+```bash
+# Create the virtual environment named 'venv' (or similar)
+python -m venv venv
+
+# Activate the virtual environment:
+
+# On macOS/Linux:
+source venv/bin/activate
+
+# On Windows (Command Prompt):
+venv\Scripts\activate
+
+# On Windows (PowerShell):
+venv\Scripts\Activate.ps1
+```
+
+### 2. Install Dependencies
+
+Once the [Virtual Environment](https://docs.python.org/3/library/venv.html) is active, install all required packages listed in requirements.txt using [pip](https://pip.pypa.io/en/stable/):
+
+```bash
+(venv) pip install -r requirements.txt
+```
+
+This command reads the list of packages and versions from the file and installs them into your isolated environment.
+
+### 3. Deactivate the Environment (When done)
+
+When you are finished working on the project, you can exit the [Virtual Environment](https://docs.python.org/3/library/venv.html):
+
+```bash
+(venv) deactivate
+```
+
+
+---
+
+
 ## 📄 License / Usage
 
-All exercises are part of my university (Technische Hochschule Würzburg-Schweinfurt) coursework and are intended for **educational and reference purposes only**.  
+All exercises are part of my university ([Technische Hochschule Würzburg-Schweinfurt](https://www.thws.de/)) coursework and are intended for **educational and reference purposes only**.  
 Please **do not copy** solutions for submission — use them as study material or examples instead.
 
 ---
@@ -56,5 +106,5 @@ Please **do not copy** solutions for submission — use them as study material o
 ## 👤 Author
 
 **Marco Gernet**  
-📚 *BVG3_6018017_Angewandte Informatik*  
+📚 *[BVG3_6018017_Angewandte Informatik](https://elearning.thws.de/course/view.php?id=28298)*  
 📧 [marco.gernet@study.thws.de](mailto:marco.gernet@study.thws.de) 
