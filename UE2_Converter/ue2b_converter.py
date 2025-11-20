@@ -48,6 +48,8 @@ class MainWindow(QMainWindow):
     def calc(self, value, index):
 
         try:
+
+            value = value.replace(',', '.')
             conv_value = float(value)
 
             print('Input:', str(conv_value), index)
@@ -85,45 +87,21 @@ class MainWindow(QMainWindow):
                     self.rb_km.blockSignals(False)
 
 
+            print('Output:', str(round(conv_value, 3)), unit, '\n')     #OutputText
+            self.label.setText(str(round(conv_value, 3)) + ' ' + unit)
 
-            self.outputText(conv_value, unit)
+        except ValueError:                                              #ErrorText
+            self.lineEdit.blockSignals(True)
+            self.lineEdit.clear()
+            self.lineEdit.blockSignals(False)
+            msg = QMessageBox()
+            msg.setStandardButtons(QMessageBox.Ok)
+            msg.setText("Bitte Dezimalzahl eingeben")
+            msg.exec_()
+            print("Rechnung nicht möglich! \n")
+            self.label.setText("Rechnung nicht möglich!")
 
-        except ValueError:
-            if value == '' or value == '.' or value == ',':
-                self.errorText()
-                return
-            else:
-                adder = 0
-                for i in value:
-                    if i.isnumeric():
-                        continue
-                    elif i == ',':
-                        adder += 1
-                        continue
-                    elif adder == 2:
-                        self.errorText()
-                        break
-                    else:
-                        self.errorText()
-                        return
-                value = value.replace(',', '.', 1)
-                self.calc(value, index)
 
-    def errorText(self):
-        self.lineEdit.blockSignals(True)
-        self.lineEdit.clear()
-        self.lineEdit.blockSignals(False)
-        msg = QMessageBox()
-        msg.setStandardButtons(QMessageBox.Ok)
-        msg.setText("Bitte Dezimalzahl eingeben")
-        msg.exec_()
-        print("Rechnung nicht möglich! \n")
-        self.label.setText("Rechnung nicht möglich!")
-
-    def outputText(self, conv_value, unit):
-        val = round(conv_value, 3)
-        print('Output:', str(val), unit, '\n')
-        self.label.setText(str(val) + ' ' + unit)
 
 app = QApplication([])
 window = MainWindow()
