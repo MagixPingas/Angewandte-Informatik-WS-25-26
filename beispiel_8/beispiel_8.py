@@ -17,7 +17,7 @@ class MainWindow(QMainWindow):
         fm_1.addAction(actionTest)
 
         self.resize(800, 600)
-        self.setWindowTitle("Beispiel 7")
+        self.setWindowTitle("Beispiel 8")
         self.show()
 
 
