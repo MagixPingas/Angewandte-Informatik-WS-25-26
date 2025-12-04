@@ -1,4 +1,3 @@
-
 # ---------------------------------------------------------------
 # Project : UE3 MenuBar (PyQt5)
 # Author  : Marco Gernet
