@@ -15,11 +15,14 @@ This repo contains my **completed exercises, programming tasks, and small projec
 |--------------------|--------------------------------------------------------------------|
 | `UE1_Zoom/`        | Exercise 1 – Changing widget-size with PyQt5                       |
 | `UE2_Converter/`   | Exercise 2 – Miles ↔ Kilometer converter with PyQt5                |
+| `UE3_MenuBar/`     | Exercise 3 – MenuBar with PyQt5                                    |
 | `beispiel_4/`      | Example 4 – Introduction to Labels, ComboBoxes and LineEdits       |
 | `beispiel_5/`      | Example 5 – Introduction to RadioButtons                           |
 | `beispiel_6/`      | Example 6 – Introduction to Sliders and SpinBoxes                  |
 | `beispiel_7/`      | Example 7 – Introduction to ListWidgets                            |
 | `beispiel_8/`      | Example 8 – Introduction to MenuBars                               |
+| `beispiel_9/`      | Example 9 – Introduction to InputDialogs                           |
+| `beispiel_10/`     | Example 10 – Introduction to FileDialogs                           |
 | `README.md`        | This file                                                          |
 | `requirements.txt` | Lists all necessary Python package dependencies and their versions |
 | `test.py`          | Sandbox File – can be ignored                                      |
